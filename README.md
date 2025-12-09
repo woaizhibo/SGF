@@ -13,8 +13,8 @@ This is the SceneGraphFusion c++ framework. For the network part of the code, ch
 # Prerequisites
 ## git, cmake
 ```
-apt update
-apt install git
+sudo apt update
+sudo apt install git
 # cmake
 sudo apt install python3-pip
 pip3 install cmake
@@ -31,7 +31,7 @@ pip3 install cmake
 # Assimp
 loading meshes for online rendered view generation. 
 ```
-apt install libassimp-dev
+sudo apt install libassimp-dev
 ```
 
 # Optional dependencies
@@ -56,14 +56,14 @@ sudo make install
 #### BUILD
 build the basic segmentation system 
 ```
-git clone {this_repo}
+git clone https://github.com/woaizhibo/SceneGraphFusion.git
 cd SceneGraphFusion
 git submodule init
 git submodule update
 mkdir build
 cd build
-cmake ..
-make
+cmake .. (rm -rf *)
+make (make -j$(nproc)) (make clean)
 ```
 build with GUI or graph prediction, pass these options in cmake:
 ```
